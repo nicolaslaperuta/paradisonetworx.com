@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to Paradiso Networx</title>
+  <title>Paradiso Networx</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,37 +13,66 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      text-align: center;
       min-height: 100vh;
       margin: 0;
-      text-align: center;
       padding: 0 20px;
     }
 
-    h1 {
-      font-size: 3rem;
+    .heading {
+      line-height: 1.2;
       margin-bottom: 0.5em;
+    }
+
+    .welcome {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .brand {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 0;
       white-space: nowrap;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       max-width: 700px;
-      margin-bottom: 1.5em;
+      margin-bottom: 2em;
     }
 
     footer {
-      position: fixed;
-      bottom: 20px;
       font-size: 0.9rem;
       color: #aaa;
       white-space: nowrap;
     }
+
+    @media (max-width: 400px) {
+      .welcome {
+        font-size: 1.5rem;
+      }
+
+      .brand {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Welcome to <span style="white-space: nowrap;">Paradiso Networx</span></h1>
-  <p>We are currently building our new digital platform. This website will soon host information about our services, innovations, and solutions in network infrastructure and smart technology integration.</p>
-  
-  <footer>&copy; 2025 <span style="white-space: nowrap;">Paradiso Networx</span>. All rights reserved.</footer>
+  <div class="heading">
+    <p class="welcome">Welcome to</p>
+    <p class="brand">Paradiso Networx</p>
+  </div>
+
+  <p>
+    We are currently building our new digital platform. This website will soon host information about our services, innovations, and solutions in network infrastructure and smart technology integration.
+  </p>
+
+  <footer>&copy; 2025 Paradiso Networx. All rights reserved.</footer>
 </body>
 </html>
