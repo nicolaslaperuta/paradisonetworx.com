@@ -27,8 +27,6 @@
             box-sizing: border-box; /* Ensure padding doesn't increase total height */
         }
 
-        /* Removed header/nav styling as they are no longer present */
-
         main {
             flex: 1;
             display: flex;
@@ -67,10 +65,12 @@
             max-width: 960px;
             width: 100%;
             padding: 30px 20px;
-            margin-bottom: 40px;
+            margin-bottom: 50px; /* Increased margin-bottom for better separation */
             box-sizing: border-box;
             background-color: rgba(255, 255, 255, 0.03); /* Slightly visible background for sections */
             border-radius: 8px;
+            /* Temporalmente, si el problema persiste, puedes descomentar la línea de abajo para ver los límites de cada sección: */
+            /* border: 2px solid red; */
         }
 
         section h2 {
