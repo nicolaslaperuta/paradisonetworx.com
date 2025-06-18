@@ -74,29 +74,21 @@
             margin-bottom: 40px;
             padding-top: 50px; /* Space for fixed header */
             text-align: center;
+            width: 100%; /* Ensure it spans side to side */
         }
 
-        .heading {
-            line-height: 1.2;
-            margin-bottom: 0.5em;
-        }
-
-        .welcome {
-            font-size: 2rem;
-            margin: 0;
-        }
-
-        .brand {
-            font-size: 2.5rem;
+        .hero-title {
+            font-size: 4rem; /* Larger font size */
             font-weight: bold;
+            color: #fff;
             margin: 0;
-            white-space: nowrap;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin-bottom: 2em;
+            white-space: nowrap; /* Prevent wrapping for the title */
+            overflow: hidden; /* Hide overflow if it's too wide for small screens */
+            text-overflow: ellipsis; /* Add ellipsis if text is cut */
+            padding: 0 20px; /* Add some padding on sides */
+            box-sizing: border-box;
+            width: 100%; /* Spans full width */
+            line-height: 1.2;
         }
 
         section {
@@ -224,6 +216,12 @@
         }
 
         /* Responsive Adjustments */
+        @media (max-width: 960px) {
+            .hero-title {
+                font-size: 3rem; /* Adjust for slightly smaller screens */
+            }
+        }
+
         @media (max-width: 768px) {
             nav ul {
                 flex-direction: column;
@@ -232,6 +230,10 @@
 
             nav li {
                 margin-bottom: 10px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem; /* Further adjustment for tablets */
             }
 
             .services-grid, .portfolio-grid {
@@ -251,17 +253,10 @@
             }
         }
 
-        @media (max-width: 400px) {
-            .welcome {
-                font-size: 1.5rem;
-            }
-
-            .brand {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem; /* Smaller for very small phones */
+                white-space: normal; /* Allow title to wrap on very small screens */
             }
 
             footer {
@@ -274,112 +269,106 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#about">Acerca de Nosotros</a></li>
-                <li><a href="#services">Servicios</a></li>
-                <li><a href="#portfolio">Portafolio</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <div class="heading">
-                <p class="welcome">Welcome to</p>
-                <p class="brand">Paradiso Networx</p>
-            </div>
-            <p>
-                We are currently building our new digital platform. This website will soon host information about our services, innovations, and solutions in network infrastructure and smart technology integration.
-            </p>
+            <h1 class="hero-title">PARADISO NETWORX</h1>
             </section>
 
         <section id="about">
-            <h2>Acerca de Nosotros</h2>
+            <h2>About Us</h2>
             <p>
-                En Paradiso Networx, estamos dedicados a proporcionar soluciones de infraestructura de red y tecnología inteligente de vanguardia para negocios de todos los tamaños. Nuestro equipo de expertos se apasiona por crear sistemas confiables, eficientes y personalizados que impulsen el éxito de nuestros clientes. Nos esforzamos por mantenernos a la vanguardia de la tecnología, ofreciendo las últimas innovaciones en conectividad, audio IP, sistemas de control y puntos de venta. Nuestra misión es simplificar la complejidad tecnológica para que nuestros clientes puedan concentrarse en lo que mejor saben hacer: hacer crecer sus negocios.
+                At Paradiso Networx, we are dedicated to providing cutting-edge network infrastructure and smart technology solutions for businesses of all sizes. Our team of experts is passionate about creating reliable, efficient, and customized systems that drive our clients' success. We strive to stay at the forefront of technology, offering the latest innovations in connectivity, IP audio, control systems, and point-of-sale solutions. Our mission is to simplify technological complexity so that our clients can focus on what they do best: growing their businesses.
             </p>
         </section>
 
         <section id="services">
-            <h2>Nuestros Servicios</h2>
+            <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-item">
-                    <a href="https://www.paradisonetworx.com" target="_blank" aria-label="Instalación de Redes">
-                        <img src="https://via.placeholder.com/80/007bff/ffffff?Text=Redes" alt="Icono de Redes">
+                    <a href="https://www.paradisonetworx.com" target="_blank" aria-label="Commercial Network Installation">
+                        <img src="https://via.placeholder.com/80/007bff/ffffff?Text=Networks" alt="Networks Icon">
                     </a>
-                    <h3>Instalación de Redes para Comercio</h3>
-                    <p>Diseñamos e implementamos redes robustas y seguras para comercios, garantizando una conectividad confiable para sus operaciones diarias.</p>
+                    <h3>Commercial Network Installation</h3>
+                    <p>We design and implement robust and secure networks for businesses, ensuring reliable connectivity for their daily operations.</p>
                 </div>
                 <div class="service-item">
-                    <a href="https://www.paradisonetworx.com" target="_blank" aria-label="Audio por IP">
-                        <img src="https://via.placeholder.com/80/28a745/ffffff?Text=AudioIP" alt="Icono de Audio por IP">
+                    <a href="https://www.paradisonetworx.com" target="_blank" aria-label="IP Audio Installation">
+                        <img src="https://via.placeholder.com/80/28a745/ffffff?Text=IP+Audio" alt="IP Audio Icon">
                     </a>
-                    <h3>Instalación de Audio por IP</h3>
-                    <p>Implementamos sistemas de audio basados en IP para una distribución de sonido flexible y de alta calidad en todo su establecimiento.</p>
+                    <h3>IP Audio Installation</h3>
+                    <p>We deploy IP-based audio systems for flexible and high-quality sound distribution throughout your establishment.</p>
                 </div>
                 <div class="service-item">
-                    <a href="https://www.paradisonetworx.com" target="_blank" aria-label="Selectores de Zona de Audio">
-                        <img src="https://via.placeholder.com/80/dc3545/ffffff?Text=Zonas" alt="Icono de Zonas de Audio">
+                    <a href="https://www.paradisonetworx.com" target="_blank" aria-label="Audio Zone Selectors">
+                        <img src="https://via.placeholder.com/80/dc3545/ffffff?Text=Zones" alt="Audio Zones Icon">
                     </a>
-                    <h3>Selectores de Zona de Audio</h3>
-                    <p>Ofrecemos e instalamos selectores de zona de audio con control intuitivo desde paneles de pared, tabletas o teléfonos inteligentes.</p>
+                    <h3>Audio Zone Selectors</h3>
+                    <p>We provide and install audio zone selectors with intuitive control from wall panels, tablets, or smartphones.</p>
                 </div>
                 <div class="service-item">
-                    <a href="https://www.paradisonetworx.com" target="_blank" aria-label="Soluciones de Conectividad">
-                        <img src="https://via.placeholder.com/80/ffc107/000000?Text=Conectar" alt="Icono de Conectividad">
+                    <a href="https://www.paradisonetworx.com" target="_blank" aria-label="Connectivity Solutions">
+                        <img src="https://via.placeholder.com/80/ffc107/000000?Text=Connect" alt="Connectivity Icon">
                     </a>
-                    <h3>Soluciones de Conectividad</h3>
-                    <p>Aseguramos una conectividad integral para todos sus dispositivos y sistemas, optimizando el rendimiento y la eficiencia.</p>
+                    <h3>Connectivity Solutions</h3>
+                    <p>We ensure comprehensive connectivity for all your devices and systems, optimizing performance and efficiency.</p>
                 </div>
                 <div class="service-item">
-                    <a href="https://www.paradisonetworx.com" target="_blank" aria-label="Puntos de Venta (POS)">
-                        <img src="https://via.placeholder.com/80/17a2b8/ffffff?Text=POS" alt="Icono de Puntos de Venta">
+                    <a href="https://www.paradisonetworx.com" target="_blank" aria-label="Point of Sale (POS) Installation">
+                        <img src="https://via.placeholder.com/80/17a2b8/ffffff?Text=POS" alt="POS Icon">
                     </a>
-                    <h3>Instalación de Puntos de Venta (POS)</h3>
-                    <p>Configuramos e integramos sistemas de punto de venta eficientes y fáciles de usar para su negocio comercial.</p>
+                    <h3>Point of Sale (POS) Installation</h3>
+                    <p>We set up and integrate efficient and user-friendly point-of-sale systems for your commercial business.</p>
                 </div>
             </div>
         </section>
 
         <section id="portfolio">
-            <h2>Nuestro Portafolio</h2>
+            <h2>Our Portfolio</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <h3>Café "Aroma Delicioso"</h3>
-                    <p>Implementamos una solución de audio por IP en todo el café, permitiendo la reproducción de música ambiental personalizada en diferentes zonas (salón principal, terraza). También instalamos puntos de venta modernos para agilizar las transacciones.</p>
-                    <p><strong>Servicios Utilizados:</strong> Audio por IP, Puntos de Venta</p>
-                    <a href="https://www.paradisonetworx.com/portfolio-cafe" target="_blank">Ver detalles del proyecto</a>
+                    <h3>"Delicious Aroma" Cafe</h3>
+                    <p>We implemented an IP audio solution throughout the cafe, allowing customized background music playback in different zones (main lounge, terrace). We also installed modern point-of-sale systems to streamline transactions.</p>
+                    <p><strong>Services Used:</strong> IP Audio, Point of Sale</p>
+                    <a href="https://www.paradisonetworx.com/portfolio-cafe" target="_blank">View Project Details</a>
                 </div>
                 <div class="portfolio-item">
-                    <h3>Tienda de Ropa "Fashion Trends"</h3>
-                    <p>Diseñamos e instalamos una red Wi-Fi robusta para clientes y empleados. Además, implementamos un sistema de selector de zona de audio con controles de pared para ambientar la tienda con música adecuada para cada momento.</p>
-                    <p><strong>Servicios Utilizados:</strong> Instalación de Redes, Selectores de Zona de Audio</p>
-                    <a href="https://www.paradisonetworx.com/portfolio-fashion" target="_blank">Ver detalles del proyecto</a>
+                    <h3>"Fashion Trends" Clothing Store</h3>
+                    <p>We designed and installed a robust Wi-Fi network for both customers and staff. Additionally, we implemented an audio zone selector system with wall controls to set the store's ambiance with appropriate music for every moment.</p>
+                    <p><strong>Services Used:</strong> Network Installation, Audio Zone Selectors</p>
+                    <a href="https://www.paradisonetworx.com/portfolio-fashion" target="_blank">View Project Details</a>
                 </div>
                 <div class="portfolio-item">
-                    <h3>Restaurante "Sabores Auténticos"</h3>
-                    <p>Nos encargamos de la conectividad integral del restaurante, asegurando un acceso a internet rápido y confiable para la gestión de pedidos online y los sistemas de punto de venta. También instalamos selectores de zona de audio controlables desde tabletas para el ambiente musical.</p>
-                    <p><strong>Servicios Utilizados:</strong> Conectividad, Selectores de Zona de Audio, Puntos de Venta</p>
-                    <a href="https://www.paradisonetworx.com/portfolio-restaurante" target="_blank">Ver detalles del proyecto</a>
+                    <h3>"Authentic Flavors" Restaurant</h3>
+                    <p>We handled the comprehensive connectivity of the restaurant, ensuring fast and reliable internet access for online order management and point-of-sale systems. We also installed tablet-controllable audio zone selectors for the musical atmosphere.</p>
+                    <p><strong>Services Used:</strong> Connectivity, Audio Zone Selectors, Point of Sale</p>
+                    <a href="https://www.paradisonetworx.com/portfolio-restaurant" target="_blank">View Project Details</a>
                 </div>
                 <div class="portfolio-item">
-                    <h3>Oficinas "Tech Solutions S.A."</h3>
-                    <p>Proporcionamos una infraestructura de red de alta velocidad y segura, optimizando la comunicación interna y el rendimiento de las aplicaciones en la nube. Además, implementamos sistemas de conectividad para sus salas de conferencias.</p>
-                    <p><strong>Servicios Utilizados:</strong> Instalación de Redes, Conectividad</p>
-                    <a href="https://www.paradisonetworx.com/portfolio-techsolutions" target="_blank">Ver detalles del proyecto</a>
+                    <h3>"Tech Solutions Inc." Offices</h3>
+                    <p>We provided a high-speed and secure network infrastructure, optimizing internal communication and cloud application performance. Additionally, we implemented connectivity systems for their conference rooms.</p>
+                    <p><strong>Services Used:</strong> Network Installation, Connectivity</p>
+                    <a href="https://www.paradisonetworx.com/portfolio-techsolutions" target="_blank">View Project Details</a>
                 </div>
             </div>
         </section>
 
         <section id="contact">
-            <h2>Contacto</h2>
+            <h2>Contact Us</h2>
             <p>
-                Estamos aquí para ayudarte con tus necesidades de infraestructura de red y tecnología inteligente. Contáctanos hoy mismo para discutir tu proyecto y obtener una cotización personalizada.
+                We are here to help you with your network infrastructure and smart technology needs. Contact us today to discuss your project and get a personalized quote.
             </p>
             <p>
-                Puedes enviarnos un correo electrónico a <a href="mailto:info@paradisonetworx.com" style="color: #8be9fd; text-decoration: none;">info@paradisonetworx.com</a> o llamarnos al <a href="tel:+1234567890" style="color: #8be9fd; text-decoration: none;">+1 (234) 567-890</a>.
+                You can email us at <a href="mailto:info@paradisonetworx.com" style="color: #8be9fd; text-decoration: none;">info@paradisonetworx.com</a> or call us at <a href="tel:+1234567890" style="color: #8be9fd; text-decoration: none;">+1 (234) 567-890</a>.
             </p>
-            </section>
+        </section>
     </main>
 
     <footer>&copy; 2025 Paradiso Networx. All rights reserved.</footer>
