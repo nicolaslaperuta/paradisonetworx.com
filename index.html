@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paradiso Networx</title>
     <style>
+        /* Base Styles - Reset and Body Background */
         html, body {
             margin: 0;
             padding: 0;
@@ -12,42 +13,41 @@
         }
 
         html {
-            background-color: #000;
+            background-color: #000; /* Fallback for HTML */
         }
 
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Fondo degradado */
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Degraded background */
             color: #fff;
             display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            flex-direction: column; /* Stacks main and footer vertically */
+            min-height: 100vh; /* Ensures body takes full viewport height */
             text-align: center;
-            box-sizing: border-box;
+            box-sizing: border-box; /* Standard box model */
         }
 
+        /* Main Content Area */
         main {
-            flex: 1; /* Permite a 'main' expandirse y ocupar el espacio disponible */
+            flex: 1; /* Allows 'main' to grow and occupy available space */
             display: flex;
-            flex-direction: column;
-            align-items: center; /* Centra el contenido horizontalmente */
-            padding: 20px; /* Padding general para el contenido dentro de main */
+            flex-direction: column; /* Stacks sections vertically */
+            align-items: center; /* Centers sections horizontally */
+            padding: 20px; /* Padding inside main for its content */
             box-sizing: border-box;
-            /* Eliminamos 'gap' de aquí, volvemos a usar márgenes explícitos */
-            /* gap: 50px; */
+            gap: 50px; /* Crucial: Creates 50px vertical space between direct children (sections) */
         }
 
+        /* Hero Section Styling */
         .hero {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-bottom: 50px; /* Espacio después del hero */
+            margin-bottom: 20px; /* Extra space after hero, before first content section */
             padding-top: 20px;
             text-align: center;
             width: 100%;
-            /* Aseguramos que no tenga un margin-top si la siguiente regla lo aplica por error */
-            margin-top: 0;
         }
 
         .hero-title {
@@ -55,46 +55,53 @@
             font-weight: bold;
             color: #fff;
             margin: 0;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            white-space: nowrap; /* Prevents title from wrapping */
+            overflow: hidden; /* Hides overflow if title is too wide */
+            text-overflow: ellipsis; /* Adds ellipsis if title is cut */
             padding: 0 20px;
             box-sizing: border-box;
             width: 100%;
             line-height: 1.2;
         }
 
+        /* General Section Styling */
         section {
-            max-width: 960px;
-            width: 100%;
+            max-width: 960px; /* Max width for content readability */
+            width: 100%; /* Ensures sections take full available width up to max-width */
             padding: 30px 20px;
-            /* margin-bottom para el espacio debajo de cada sección */
-            margin-bottom: 50px;
+            margin-bottom: 0; /* Reset margin-bottom as 'gap' handles spacing */
             box-sizing: border-box;
-            background-color: rgba(255, 255, 255, 0.03); /* Fondo transparente oscuro para la sección */
+            background-color: rgba(255, 255, 255, 0.03); /* Semi-transparent background */
             border-radius: 8px;
-            border: 2px solid red; /* <-- ¡POR FAVOR, DEJA ESTA LÍNEA DESCOMENTADA PARA DEBUGGING! */
+            flex-shrink: 0; /* Prevents sections from shrinking, maintaining their intrinsic height */
+            position: relative; /* Essential for z-index to work */
+            outline: 2px solid yellow; /* DEBUG: Visual border to see actual section boundaries */
         }
 
-        /* Aplica margin-top a todas las secciones que NO son la primera (es decir, después del hero) */
-        main section:not(.hero) { /* Apuntamos a secciones que no sean la clase 'hero' */
-            margin-top: 50px; /* Fuerza un margen superior para separarlas de la sección anterior */
+        /* Z-index for explicit stacking order (for debugging overlap only) */
+        #about {
+            z-index: 2; /* Ensure About Us is above Services if they overlap visually */
+        }
+        #services {
+            z-index: 1; /* Services should be below About Us if they overlap */
         }
 
-
+        /* Heading Styling for Sections */
         section h2 {
             font-size: 2rem;
             margin-bottom: 20px;
             text-align: center;
-            color: #8be9fd;
+            color: #8be9fd; /* Accent color */
         }
 
+        /* Paragraph Styling for Sections */
         section p {
             font-size: 1.1rem;
             line-height: 1.6;
-            text-align: justify;
+            text-align: justify; /* Justified text for better readability */
         }
 
+        /* Services Grid Styling */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -134,6 +141,7 @@
             text-align: center;
         }
 
+        /* Portfolio Grid Styling */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -183,13 +191,14 @@
             text-decoration: none;
         }
 
+        /* Footer Styling */
         footer {
             padding: 20px 0;
             font-size: 0.9rem;
             color: #aaa;
             white-space: nowrap;
             text-align: center;
-            margin-top: auto; /* Empuja el footer al final del flex-column 'body' */
+            margin-top: auto; /* Pushes footer to the bottom of the flex column (body) */
             width: 100%;
             background-color: rgba(0, 0, 0, 0.5);
         }
