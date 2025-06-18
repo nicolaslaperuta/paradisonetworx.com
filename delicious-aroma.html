@@ -1,110 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Delicious Aroma Café</title>
-  <style>
-    html {
-      background: black; /* Fondo sólido negro detrás del degradado */
-      height: 100%;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paradiso Networx</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      color: #000;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* degradado encima del fondo negro */
-    }
+        html {
+            background-color: #000 !important;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            min-height: 100%;
+        }
 
-    .container {
-      background-color: rgba(0, 0, 0, 0.7);
-      border-radius: 15px;
-      padding: 40px 20px;
-      margin: 60px auto;
-      max-width: 1000px;
-      box-shadow: 0 0 15px rgba(139, 233, 253, 0.4); /* sombra azul suave */
-    }
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .title {
-      font-size: 2.5rem;
-      color: #8be9fd;
-      margin-bottom: 20px;
-    }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-    .description {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #e0e0e0;
-      margin-bottom: 40px;
-    }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+            text-align: center;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 2px solid #000;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(139, 233, 253, 0.4);
+        }
 
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
+        .hero-title {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #fff;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 0 20px;
+            box-sizing: border-box;
+            width: 100%;
+            line-height: 1.2;
+        }
 
-    .gallery img {
-      width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(139, 233, 253, 0.3);
-      border: 2px solid rgba(255, 255, 255, 0.08);
-    }
+        section {
+            max-width: 960px;
+            width: 100%;
+            padding: 30px 20px;
+            margin-bottom: 40px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+        }
 
-    .back-button {
-      margin-top: 40px;
-      display: inline-block;
-      padding: 12px 24px;
-      border: 2px solid #8be9fd;
-      color: #8be9fd;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #8be9fd;
+        }
 
-    .back-button:hover {
-      background-color: rgba(139, 233, 253, 0.1);
-    }
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
 
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      color: #aaa;
-      font-size: 0.9rem;
-      margin-top: auto;
-    }
-  </style>
+        footer {
+            padding: 20px 0;
+            font-size: 0.9rem;
+            color: #aaa;
+            white-space: nowrap;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin-top: auto;
+        }
+
+        @media (max-width: 960px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            section {
+                padding: 20px 15px;
+            }
+
+            section h2 {
+                font-size: 1.8rem;
+            }
+
+            section p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+                white-space: normal;
+            }
+
+            footer {
+                white-space: normal;
+            }
+        }
+
+        #contact {
+            border: 2px solid #8be9fd;
+            border-radius: 10px;
+            padding: 30px 20px;
+            box-shadow: 0 0 15px rgba(139, 233, 253, 0.4);
+        }
+    </style>
 </head>
 <body>
+    <main>
+        <section class="hero">
+            <h1 class="hero-title"><a href="/" style="color: inherit; text-decoration: none;">PARADISO NETWORX</a></h1>
+        </section>
 
-  <div class="container">
-    <div class="title">Delicious Aroma Café</div>
-    <div class="description">
-      Paradiso Networx llevó a cabo una implementación integral de red y sistemas inteligentes en Delicious Aroma Café. Desde sistemas de audio ambiental por zonas hasta soluciones de punto de venta, nuestro equipo transformó la experiencia tanto para clientes como para el personal.
-      <br><br>
-      Este proyecto representa nuestra capacidad de adaptarnos a espacios modernos y crear entornos tecnológicos elegantes sin sacrificar el estilo del lugar.
-    </div>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>
+                At Paradiso Networx, we are dedicated to providing cutting-edge network infrastructure and smart technology solutions for businesses of all sizes. Our team of experts is passionate about creating reliable, efficient, and customized systems that drive our clients' success. We strive to stay at the forefront of technology, offering the latest innovations in connectivity, IP audio, control systems, and point-of-sale solutions. Our mission is to simplify technological complexity so that our clients can focus on what they do best: growing their businesses.
+            </p>
+        </section>
 
-    <div class="gallery">
-      <img src="https://www.fundacionunam.org.mx/wp-content/uploads/2015/12/internet_portada.jpg" alt="Delicious Aroma Café Image 1" />
-      <img src="https://www.fundacionunam.org.mx/wp-content/uploads/2015/12/internet_portada.jpg" alt="Delicious Aroma Café Image 2" />
-      <img src="https://www.fundacionunam.org.mx/wp-content/uploads/2015/12/internet_portada.jpg" alt="Delicious Aroma Café Image 3" />
-    </div>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>
+                We are here to help you with your network infrastructure and smart technology needs. Contact us today to discuss your project and get a personalized quote.
+            </p>
+            <p>
+                You can email us at <a href="mailto:info@paradisonetworx.com" style="color: #8be9fd; text-decoration: none;">info@paradisonetworx.com</a> or call us at <a href="tel:+1234567890" style="color: #8be9fd; text-decoration: none;">+1 (234) 567-890</a>.
+            </p>
+        </section>
+    </main>
 
-    <a href="index.html" class="back-button">← Back to Home</a>
-  </div>
-
-  <footer>
-    &copy; 2025 Paradiso Networx. All rights reserved.
-  </footer>
-
+    <footer>&copy; 2025 Paradiso Networx. All rights reserved.</footer>
 </body>
 </html>
