@@ -27,35 +27,7 @@
             box-sizing: border-box; /* Ensure padding doesn't increase total height */
         }
 
-        header {
-            padding: 20px 0;
-            background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background for header */
-            position: sticky; /* Makes the header stick to the top */
-            top: 0;
-            z-index: 1000; /* Ensures header is above other content */
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.1rem;
-            padding: 5px 10px;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #8be9fd; /* A lighter blue on hover */
-            text-decoration: underline;
-        }
+        /* Removed header/nav styling as they are no longer present */
 
         main {
             flex: 1;
@@ -72,7 +44,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 40px;
-            padding-top: 50px; /* Space for fixed header */
+            padding-top: 20px; /* Adjusted padding as there's no fixed header */
             text-align: center;
             width: 100%; /* Ensure it spans side to side */
         }
@@ -208,32 +180,23 @@
             color: #aaa;
             white-space: nowrap;
             text-align: center;
-            position: relative; /* Changed to relative for better flow with content */
+            position: relative;
             bottom: 0;
             width: 100%;
             background-color: rgba(0, 0, 0, 0.5);
-            margin-top: auto; /* Pushes footer to the bottom */
+            margin-top: auto;
         }
 
         /* Responsive Adjustments */
         @media (max-width: 960px) {
             .hero-title {
-                font-size: 3rem; /* Adjust for slightly smaller screens */
+                font-size: 3rem;
             }
         }
 
         @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav li {
-                margin-bottom: 10px;
-            }
-
             .hero-title {
-                font-size: 2.5rem; /* Further adjustment for tablets */
+                font-size: 2.5rem;
             }
 
             .services-grid, .portfolio-grid {
@@ -255,32 +218,21 @@
 
         @media (max-width: 480px) {
             .hero-title {
-                font-size: 1.8rem; /* Smaller for very small phones */
-                white-space: normal; /* Allow title to wrap on very small screens */
+                font-size: 1.8rem;
+                white-space: normal;
             }
 
             footer {
-                white-space: normal; /* Allow footer text to wrap on small screens */
+                white-space: normal;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <main>
         <section class="hero">
             <h1 class="hero-title">PARADISO NETWORX</h1>
-            </section>
+        </section>
 
         <section id="about">
             <h2>About Us</h2>
@@ -308,7 +260,7 @@
                 </div>
                 <div class="service-item">
                     <a href="https://www.paradisonetworx.com" target="_blank" aria-label="Audio Zone Selectors">
-                        <img src="https://via.placeholder.com/80/dc3545/ffffff?Text=Zones" alt="Audio Zones Icon">
+                        <img src="https://via.placeholder.com/80/dc3545/ffffff?Text=Zonas" alt="Audio Zones Icon">
                     </a>
                     <h3>Audio Zone Selectors</h3>
                     <p>We provide and install audio zone selectors with intuitive control from wall panels, tablets, or smartphones.</p>
