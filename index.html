@@ -11,7 +11,7 @@
             height: 100%;
         }
 
-        html {
+      /*  html {
             background-color: #000;
         }
 
@@ -23,9 +23,29 @@
             flex-direction: column;
             min-height: 100vh;
             text-align: center;
-            padding-bottom: 60px; /* Added padding for footer */
-            box-sizing: border-box; /* Ensure padding doesn't increase total height */
-        }
+            padding-bottom: 60px; 
+            box-sizing: border-box; 
+        }   */
+
+        html {
+    background-color: #000; /* Fallback color for older browsers */
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Apply gradient to html */
+    min-height: 100%; /* Ensure html stretches to content height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Keep body at least 100vh to ensure main flex container fills viewport */
+    text-align: center;
+    /* Remove background from body */
+    /* Remove padding-bottom and box-sizing from body if they were causing issues */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Good practice to keep */
+}
 
         /* Removed header/nav styling as they are no longer present */
 
