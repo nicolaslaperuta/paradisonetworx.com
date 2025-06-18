@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Delicious Aroma Café - Paradiso Networx</title>
+  <title>Delicious Aroma Café</title>
   <style>
     html {
-      background-color: #000;
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      min-height: 100%;
+      height: 100%;
     }
 
     body {
@@ -16,131 +15,96 @@
       color: #fff;
       margin: 0;
       padding: 0;
+      text-align: center;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      box-sizing: border-box;
-      text-align: center;
     }
 
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .hero {
-      background-color: rgba(255, 255, 255, 0.03);
-      border: 2px solid #8be9fd;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(139, 233, 253, 0.4);
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
       padding: 40px 20px;
-      margin: 40px 0;
-      width: 100%;
-      max-width: 960px;
-    }
-
-    .hero h1 {
-      font-size: 2rem;
-      margin: 0;
-      color: #8be9fd;
-    }
-
-    .project-details {
-      background-color: rgba(255, 255, 255, 0.03);
-      border-radius: 8px;
-      padding: 30px 20px;
-      max-width: 960px;
-      width: 100%;
-      margin-bottom: 40px;
-      box-sizing: border-box;
+      margin: 60px auto;
+      max-width: 1000px;
       border: 2px solid #8be9fd;
-      box-shadow: 0 0 12px rgba(139, 233, 253, 0.2);
+      box-shadow: 0 0 15px rgba(139, 233, 253, 0.4);
     }
 
-    .project-details h2 {
+    .title {
+      font-size: 2.5rem;
       color: #8be9fd;
-      font-size: 2rem;
       margin-bottom: 20px;
     }
 
-    .project-details p {
+    .description {
       font-size: 1.1rem;
       line-height: 1.6;
-      text-align: justify;
-      margin-bottom: 20px;
+      color: #e0e0e0;
+      margin-bottom: 40px;
     }
 
-    .image-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
       gap: 20px;
-      margin-top: 20px;
+      justify-content: center;
     }
 
-    .image-gallery img {
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(139, 233, 253, 0.3);
+    .gallery img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(139, 233, 253, 0.3);
+      border: 2px solid rgba(255, 255, 255, 0.08);
     }
 
-    a.back-link {
+    .back-button {
+      margin-top: 40px;
       display: inline-block;
-      margin-top: 30px;
+      padding: 12px 24px;
+      border: 2px solid #8be9fd;
       color: #8be9fd;
+      border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1rem;
-      padding: 10px 20px;
-      border: 2px solid #8be9fd;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s;
     }
 
-    a.back-link:hover {
+    .back-button:hover {
       background-color: rgba(139, 233, 253, 0.1);
     }
 
     footer {
-      padding: 20px 0;
-      font-size: 0.9rem;
-      color: #aaa;
       text-align: center;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px 0;
+      color: #aaa;
+      font-size: 0.9rem;
       margin-top: auto;
     }
   </style>
 </head>
 <body>
-  <main>
-    <section class="hero">
-      <h1>Delicious Aroma Café</h1>
-    </section>
 
-    <section class="project-details">
-      <h2>Project Overview</h2>
-      <p>
-        Paradiso Networx was chosen to revamp the technology setup for Delicious Aroma Café, focusing on atmosphere, efficiency, and seamless operations. Our team installed IP-based audio systems that allow customized background music in the lounge and terrace, setting the perfect mood throughout the day.
-      </p>
-      <p>
-        We also integrated a modern Point of Sale (POS) system to improve transaction speed and accuracy, ensuring that customer orders are processed without delays. The setup is managed via tablets, making the system easy to use and maintain.
-      </p>
+  <div class="container">
+    <div class="title">Delicious Aroma Café</div>
+    <div class="description">
+      Paradiso Networx llevó a cabo una implementación integral de red y sistemas inteligentes en Delicious Aroma Café. Desde sistemas de audio ambiental por zonas hasta soluciones de punto de venta, nuestro equipo transformó la experiencia tanto para clientes como para el personal.
+      <br><br>
+      Este proyecto representa nuestra capacidad de adaptarnos a espacios modernos y crear entornos tecnológicos elegantes sin sacrificar el estilo del lugar.
+    </div>
 
-      <h2>Gallery</h2>
-      <div class="image-gallery">
-        <img src="https://www.fundacionunam.org.mx/wp-content/uploads/2015/12/internet_portada.jpg" alt="Cafe Network Setup">
-        <img src="https://www.fundacionunam.org.mx/wp-content/uploads/2015/12/internet_portada.jpg" alt="POS Terminal Installed">
-        <img src="https://www.fundacionunam.org.mx/wp-content/uploads/2015/12/internet_portada.jpg" alt="IP Audio Speakers">
-      </div>
+    <div class="gallery">
+      <img src="https://www.fundacionunam.org.mx/wp-content/uploads/2015/12/internet_portada.jpg" alt="Delicious Aroma Café Image 1" />
+      <img src="https://www.fundacionunam.org.mx/wp-content/uploads/2015/12/internet_portada.jpg" alt="Delicious Aroma Café Image 2" />
+      <img src="https://www.fundacionunam.org.mx/wp-content/uploads/2015/12/internet_portada.jpg" alt="Delicious Aroma Café Image 3" />
+    </div>
 
-      <a class="back-link" href="index.html">← Back to Home</a>
-    </section>
-  </main>
+    <a href="index.html" class="back-button">← Back to Home</a>
+  </div>
 
-  <footer>&copy; 2025 Paradiso Networx. All rights reserved.</footer>
+  <footer>
+    &copy; 2025 Paradiso Networx. All rights reserved.
+  </footer>
+
 </body>
 </html>
