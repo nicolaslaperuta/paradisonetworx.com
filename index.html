@@ -69,9 +69,14 @@
             box-sizing: border-box;
             background-color: rgba(255, 255, 255, 0.03); /* Slightly visible background for sections */
             border-radius: 8px;
-            /* Temporalmente, si el problema persiste, puedes descomentar la línea de abajo para ver los límites de cada sección: */
-            /* border: 2px solid red; */
         }
+
+        /* --- FIX FOR OVERLAP --- */
+        /* Explicitly add margin-top to the services section if it's overlapping */
+        #services {
+            margin-top: 20px; /* Add a top margin to push it down */
+        }
+        /* --- END FIX --- */
 
         section h2 {
             font-size: 2rem;
