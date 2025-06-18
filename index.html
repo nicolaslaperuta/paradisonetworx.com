@@ -27,12 +27,14 @@
             box-sizing: border-box; /* Ensure padding doesn't increase total height */
         }
 
+        /* Removed header/nav styling as they are no longer present */
+
         main {
             flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px; /* Padding general del main */
+            padding: 20px;
             box-sizing: border-box;
         }
 
@@ -42,33 +44,32 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 40px;
-            padding-top: 20px;
+            padding-top: 20px; /* Adjusted padding as there's no fixed header */
             text-align: center;
-            width: 100%;
+            width: 100%; /* Ensure it spans side to side */
         }
 
         .hero-title {
-            font-size: 4rem;
+            font-size: 4rem; /* Larger font size */
             font-weight: bold;
             color: #fff;
             margin: 0;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            padding: 0 20px;
+            white-space: nowrap; /* Prevent wrapping for the title */
+            overflow: hidden; /* Hide overflow if it's too wide for small screens */
+            text-overflow: ellipsis; /* Add ellipsis if text is cut */
+            padding: 0 20px; /* Add some padding on sides */
             box-sizing: border-box;
-            width: 100%;
+            width: 100%; /* Spans full width */
             line-height: 1.2;
         }
 
-        /* MODIFICACIÓN CLAVE AQUÍ: Eliminamos el background-color de las secciones principales */
         section {
             max-width: 960px;
             width: 100%;
             padding: 30px 20px;
             margin-bottom: 40px;
             box-sizing: border-box;
-            /* background-color: rgba(255, 255, 255, 0.03); <--- ELIMINADO ESTA LÍNEA */
+            background-color: rgba(255, 255, 255, 0.03); /* Slightly visible background for sections */
             border-radius: 8px;
         }
 
@@ -76,23 +77,22 @@
             font-size: 2rem;
             margin-bottom: 20px;
             text-align: center;
-            color: #8be9fd;
+            color: #8be9fd; /* Accent color for headings */
         }
 
         section p {
             font-size: 1.1rem;
             line-height: 1.6;
-            text-align: justify;
+            text-align: justify; /* Justify text for better readability in sections */
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            margin-top: 20px;
+            margin-top: 100px;
         }
 
-        /* Estos elementos (service-item y portfolio-item) SÍ conservan su background-color */
         .service-item {
             background-color: rgba(255, 255, 255, 0.05);
             padding: 20px;
@@ -110,8 +110,8 @@
             max-width: 80px;
             height: auto;
             margin-bottom: 10px;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(139, 233, 253, 0.5);
+            border-radius: 50%; /* Make images circular */
+            box-shadow: 0 0 10px rgba(139, 233, 253, 0.5); /* Glowing effect */
         }
 
         .service-item h3 {
@@ -122,7 +122,7 @@
 
         .service-item p {
             font-size: 1rem;
-            text-align: center;
+            text-align: center; /* Center align service item descriptions */
         }
 
         .portfolio-grid {
@@ -136,7 +136,7 @@
             background-color: rgba(255, 255, 255, 0.05);
             padding: 20px;
             border-radius: 8px;
-            text-align: left;
+            text-align: left; /* Align text left within portfolio items */
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
