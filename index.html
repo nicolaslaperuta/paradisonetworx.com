@@ -1,3 +1,20 @@
+I understand that you want to separate the sections in your HTML so that they don't overlap, specifically making sure "Our Services" is a completely new and distinct section.
+
+The problem you're describing, where sections "mix or overlap," is usually not a direct result of HTML structure itself, but rather how CSS `position` properties (like `position: absolute;` or `position: fixed;`) or negative margins are being used, which can take elements out of the normal document flow.
+
+Looking at your CSS, there are no `position: absolute;` or `position: fixed;` declarations for `section` elements, nor are there any negative margins. The `main` element uses `display: flex` with `flex-direction: column` and `flex: 1`, which correctly stacks its children (your `section` elements) vertically and makes the `main` content area expand to fill available space.
+
+The `margin-bottom: 40px;` on the `section` elements and `margin-bottom: 40px;` on the `.hero` class are already creating spacing between your sections. The issue of sections "overlapping" might be a misinterpretation of how the background gradient on the `body` interacts with the slightly transparent background of the `section` elements (`background-color: rgba(255, 255, 255, 0.03);`). They are visually distinct but the overall background of the page is still visible through the sections due to their transparency.
+
+To ensure each section is clearly distinct and doesn't visually "blend" into the previous one in a way that suggests overlapping, I will:
+
+1.  **Keep the current `section` structure:** Each `section` is already a block-level element that naturally creates its own space.
+2.  **Ensure sufficient spacing:** The `margin-bottom: 40px;` on sections is already doing this.
+3.  **Adjust `background-color` of sections (optional but effective for clear separation):** If you want them to be more opaque to clearly delineate their boundaries against the body's gradient, you could increase the opacity of their background or make it fully opaque. I'll increase it slightly to `0.07` for better visual separation.
+
+Here's the entire, corrected HTML and CSS code:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +64,9 @@
             padding-top: 20px; /* Adjusted padding as there's no fixed header */
             text-align: center;
             width: 100%; /* Ensure it spans side to side */
+            background-color: rgba(255, 255, 255, 0.03); /* Maintain background for hero */
+            border-radius: 8px; /* Apply border-radius for consistency */
+            box-sizing: border-box; /* Ensure padding doesn't increase total width */
         }
 
         .hero-title {
@@ -69,7 +89,7 @@
             padding: 30px 20px;
             margin-bottom: 40px;
             box-sizing: border-box;
-            background-color: rgba(255, 255, 255, 0.03); /* Slightly visible background for sections */
+            background-color: rgba(255, 255, 255, 0.07); /* Slightly increased opacity for better separation */
             border-radius: 8px;
         }
 
@@ -326,3 +346,4 @@
     <footer>&copy; 2025 Paradiso Networx. All rights reserved.</footer>
 </body>
 </html>
+```
