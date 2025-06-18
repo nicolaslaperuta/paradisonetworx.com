@@ -17,23 +17,24 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Fondo degradado */
             color: #fff;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
             text-align: center;
-            padding-bottom: 60px; /* Added padding for footer */
-            box-sizing: border-box; /* Ensure padding doesn't increase total height */
+            /* Eliminamos padding-bottom de body aquí, ya que el footer se ajustará con margin-top: auto */
+            box-sizing: border-box;
         }
 
         main {
-            flex: 1;
+            flex: 1; /* Permite a 'main' expandirse y ocupar el espacio disponible */
             display: flex;
             flex-direction: column;
-            align-items: center;
-            padding: 20px;
+            align-items: center; /* Centra el contenido horizontalmente */
+            padding: 20px; /* Padding general para el contenido dentro de main */
             box-sizing: border-box;
+            gap: 50px; /* <-- ¡AQUÍ ESTÁ EL CAMBIO CLAVE! Espacio vertical entre las secciones */
         }
 
         .hero {
@@ -41,23 +42,24 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-bottom: 40px;
-            padding-top: 20px; /* Adjusted padding as there's no fixed header */
+            /* margin-bottom no es tan necesario aquí con gap en main, pero lo mantenemos para el hero si se quiere un espacio extra antes de la primera sección normal */
+            margin-bottom: 20px;
+            padding-top: 20px;
             text-align: center;
-            width: 100%; /* Ensure it spans side to side */
+            width: 100%;
         }
 
         .hero-title {
-            font-size: 4rem; /* Larger font size */
+            font-size: 4rem;
             font-weight: bold;
             color: #fff;
             margin: 0;
-            white-space: nowrap; /* Prevent wrapping for the title */
-            overflow: hidden; /* Hide overflow if it's too wide for small screens */
-            text-overflow: ellipsis; /* Add ellipsis if text is cut */
-            padding: 0 20px; /* Add some padding on sides */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 0 20px;
             box-sizing: border-box;
-            width: 100%; /* Spans full width */
+            width: 100%;
             line-height: 1.2;
         }
 
@@ -65,30 +67,31 @@
             max-width: 960px;
             width: 100%;
             padding: 30px 20px;
-            margin-bottom: 50px; /* Increased margin-bottom for better separation */
+            /* Eliminamos margin-bottom de las secciones, ya que 'gap' en main se encargará del espacio */
+            margin-bottom: 0;
             box-sizing: border-box;
-            background-color: rgba(255, 255, 255, 0.03); /* Slightly visible background for sections */
+            background-color: rgba(255, 255, 255, 0.03); /* Fondo transparente oscuro para la sección */
             border-radius: 8px;
+            /* Puedes descomentar la línea de abajo para debugging si es necesario, pero debería estar resuelto: */
+            /* border: 2px solid red; */
         }
 
-        /* --- FIX FOR OVERLAP --- */
-        /* Explicitly add margin-top to the services section if it's overlapping */
+        /* Eliminamos el margin-top específico de #services ya que 'gap' lo manejará */
         #services {
-            margin-top: 20px; /* Add a top margin to push it down */
+            margin-top: 0;
         }
-        /* --- END FIX --- */
 
         section h2 {
             font-size: 2rem;
             margin-bottom: 20px;
             text-align: center;
-            color: #8be9fd; /* Accent color for headings */
+            color: #8be9fd;
         }
 
         section p {
             font-size: 1.1rem;
             line-height: 1.6;
-            text-align: justify; /* Justify text for better readability in sections */
+            text-align: justify;
         }
 
         .services-grid {
@@ -115,8 +118,8 @@
             max-width: 80px;
             height: auto;
             margin-bottom: 10px;
-            border-radius: 50%; /* Make images circular */
-            box-shadow: 0 0 10px rgba(139, 233, 253, 0.5); /* Glowing effect */
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(139, 233, 253, 0.5);
         }
 
         .service-item h3 {
@@ -127,7 +130,7 @@
 
         .service-item p {
             font-size: 1rem;
-            text-align: center; /* Center align service item descriptions */
+            text-align: center;
         }
 
         .portfolio-grid {
@@ -141,7 +144,7 @@
             background-color: rgba(255, 255, 255, 0.05);
             padding: 20px;
             border-radius: 8px;
-            text-align: left; /* Align text left within portfolio items */
+            text-align: left;
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
@@ -185,11 +188,10 @@
             color: #aaa;
             white-space: nowrap;
             text-align: center;
-            position: relative;
-            bottom: 0;
+            /* margin-top: auto empuja el footer al final del flex-column 'body' */
+            margin-top: auto;
             width: 100%;
             background-color: rgba(0, 0, 0, 0.5);
-            margin-top: auto;
         }
 
         /* Responsive Adjustments */
