@@ -1,141 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paradiso Networx</title>
-  <style>
-    .header-container {
-      width: 100%;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paradiso Networx</title>
+    <style>
+        .header-container {
+            width: 100%;
+        }
 
-    .header-image {
-      width: 100%;
-      display: block;
-      margin: 0 auto;
-      height: auto;
-    }
+        .header-image {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            height: auto;
+        }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
+        /* Tablets y escritorio */
+        @media (min-width: 768px) {
+            .header-container {
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+            }
 
-    html {
-      background-color: #000 !important;
-      background: linear-gradient(to right, #465f85, #465f85, #465f85);
-      min-height: 100%;
-    }
+            .header-image {
+                width: 50%;
+                margin: 0;
+                border-bottom-left-radius: 10px;
+            }
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
 
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      box-sizing: border-box;
-    }
+        html {
+            background-color: #000 !important;
+            background: linear-gradient(to right, #465f85, #465f85, #465f85);
+            min-height: 100%;
+        }
 
-    section {
-      max-width: 960px;
-      width: 100%;
-      padding: 30px 20px;
-      margin-bottom: 40px;
-      box-sizing: border-box;
-      background-color: rgba(000, 000, 000, 0.09);
-      box-shadow: 0 0 15px rgba(139, 233, 253, 0.2);
-      border-radius: 8px;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      text-align: center;
-      color: #8be9fd;
-    }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
 
-    section p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      text-align: justify;
-    }
+        section {
+            max-width: 960px;
+            width: 100%;
+            padding: 30px 20px;
+            margin-bottom: 40px;
+            box-sizing: border-sizing;
+            background-color: rgba(000, 000, 000, 0.09);
+            box-shadow: 0 0 15px rgba(139, 233, 253, 0.2);
+            border-radius: 8px;
+        }
 
-    footer {
-      padding: 20px 0;
-      font-size: 0.9rem;
-      color: #aaa;
-      white-space: nowrap;
-      text-align: center;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      margin-top: auto;
-    }
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #8be9fd;
+        }
 
-    @media (max-width: 960px) {
-      section h2 {
-        font-size: 1.8rem;
-      }
-    }
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
 
-    @media (max-width: 480px) {
-      footer {
-        white-space: normal;
-      }
-    }
+        footer {
+            padding: 20px 0;
+            font-size: 0.9rem;
+            color: #aaa;
+            white-space: nowrap;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin-top: auto;
+        }
 
-    #contact {
-      border: 2px solid #8be9fd;
-      border-radius: 10px;
-      padding: 30px 20px;
-      box-shadow: 0 0 15px rgba(139, 233, 253, 0.4);
-      background-color: rgba(000, 000, 000, 0.09);
-    }
-  </style>
+        @media (max-width: 960px) {
+            section h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 20px 15px;
+            }
+
+            section p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            footer {
+                white-space: normal;
+            }
+        }
+
+        #contact {
+            border: 2px solid #8be9fd;
+            border-radius: 10px;
+            padding: 30px 20px;
+            box-shadow: 0 0 15px rgba(139, 233, 253, 0.4);
+            background-color: rgba(000, 000, 000, 0.09);
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Imagen del header con link al home -->
-  <div class="header-container">
-    <a href="https://www.paradisonetworx.com">
-      <img src="https://www.paradisonetworx.com/header-paradiso-networx-2.jpg" alt="Header" class="header-image">
-    </a>
-  </div>
+    <div class="header-container">
+        <a href="index.html"> <img src="https://www.paradisonetworx.com/header-paradiso-networx-2.jpg" alt="Header" class="header-image">
+        </a>
+    </div>
 
-  <main>
-    <section id="about">
-      <h2>About Us</h2>
-      <p>
-        At Paradiso Networx, we are dedicated to providing cutting-edge network infrastructure and smart technology solutions for businesses of all sizes. Our team of experts is passionate about creating reliable, efficient, and customized systems that drive our clients' success. We strive to stay at the forefront of technology, offering the latest innovations in connectivity, IP audio, control systems, and point-of-sale solutions. Our mission is to simplify technological complexity so that our clients can focus on what they do best: growing their businesses.
-      </p>
-    </section>
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>
+                At Paradiso Networx, we are dedicated to providing cutting-edge network infrastructure and smart technology solutions for businesses of all sizes. Our team of experts is passionate about creating reliable, efficient, and customized systems that drive our clients' success. We strive to stay at the forefront of technology, offering the latest innovations in connectivity, IP audio, control systems, and point-of-sale solutions. Our mission is to simplify technological complexity so that our clients can focus on what they do best: growing their businesses.
+            </p>
+        </section>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>
-        We are here to help you with your network infrastructure and smart technology needs. Contact us today to discuss your project and get a personalized quote.
-      </p>
-      <p>
-        You can email us at <a href="mailto:info@paradisonetworx.com" style="color: #8be9fd; text-decoration: none;">info@paradisonetworx.com</a> or call us at <a href="tel:+1234567890" style="color: #8be9fd; text-decoration: none;">+1 (234) 567-890</a>.
-      </p>
-    </section>
-  </main>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>
+                We are here to help you with your network infrastructure and smart technology needs. Contact us today to discuss your project and get a personalized quote.
+            </p>
+            <p>
+                You can email us at <a href="mailto:info@paradisonetworx.com" style="color: #8be9fd; text-decoration: none;">info@paradisonetworx.com</a> or call us at <a href="tel:+1234567890" style="color: #8be9fd; text-decoration: none;">+1 (234) 567-890</a>.
+            </p>
+        </section>
+    </main>
 
-  <footer>&copy; 2025 Paradiso Networx. All rights reserved.</footer>
+    <footer>&copy; 2025 Paradiso Networx. All rights reserved.</footer>
 </body>
 </html>
   
