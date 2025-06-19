@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paradiso Networx</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    html {
+      background-color: #000 !important;
+      /*background: linear-gradient(to right, #0f2027, #203a43, #2c5364);*/
+      background: linear-gradient(to right, #465f85, #465f85, #465f85);
+      min-height: 100%;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    section {
+      max-width: 960px;
+      width: 100%;
+      padding: 30px 20px;
+      margin-bottom: 40px;
+      box-sizing: border-box;
+      background-color: rgba(000, 000, 000, 0.09);
+      box-shadow: 0 0 15px rgba(139, 233, 253, 0.2);
+      border-radius: 8px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #8be9fd;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .service-item {
+      background-color: rgba(000, 000, 000, 0.09);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .service-item:hover {
+      transform: translateY(-5px);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .service-item img {
+      max-width: 80px;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(139, 233, 253, 0.5);
+    }
+
+    .service-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .service-item p {
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .portfolio-item {
+      background-color: rgba(000, 000, 000, 0.09);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: left;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .portfolio-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #8be9fd;
+    }
+
+    .portfolio-item p {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+
+    .portfolio-item a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #007bff;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .portfolio-item a:hover {
+      background-color: #0056b3;
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 20px 0;
+      font-size: 0.9rem;
+      color: #aaa;
+      white-space: nowrap;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin-top: auto;
+    }
+
+    @media (max-width: 960px) {
+      section h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .services-grid, .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 20px 15px;
+      }
+
+      section p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      footer {
+        white-space: normal;
+      }
+    }
+
+    #contact {
+      border: 2px solid #8be9fd;
+      border-radius: 10px;
+      padding: 30px 20px;
+      box-shadow: 0 0 15px rgba(139, 233, 253, 0.4);
+      background-color: rgba(000, 000, 000, 0.09);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Imagen header reemplazando el hero -->
+  <img src="https://www.paradisonetworx.com/header-paradiso-networx.jpg" alt="Header" style="width: 100%; display: block; margin: 0 auto;">
+
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        At Paradiso Networx, we are dedicated to providing cutting-edge network infrastructure and smart technology solutions for businesses of all sizes. Our team of experts is passionate about creating reliable, efficient, and customized systems that drive our clients' success. We strive to stay at the forefront of technology, offering the latest innovations in connectivity, IP audio, control systems, and point-of-sale solutions. Our mission is to simplify technological complexity so that our clients can focus on what they do best: growing their businesses.
+      </p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <a href="https://www.paradisonetworx.com" aria-label="Commercial Network Installation">
+            <img src="https://www.paradisonetworx.com/nube.png" alt="Networks Icon">
+          </a>
+          <h3>Commercial Network Installation</h3>
+          <p>We design and implement robust and secure networks for businesses, ensuring reliable connectivity for their daily operations.</p>
+        </div>
+
+        <div class="service-item">
+          <a href="https://www.paradisonetworx.com" aria-label="IP Audio Installation">
+            <img src="https://www.paradisonetworx.com/audio.png" alt="IP Audio Icon">
+          </a>
+          <h3>IP Audio Installation</h3>
+          <p>We deploy IP-based audio systems for flexible and high-quality sound distribution throughout your establishment.</p>
+        </div>
+
+        <div class="service-item">
+          <a href="https://www.paradisonetworx.com" aria-label="Audio Zone Selectors">
+            <img src="https://www.paradisonetworx.com/consola.png" alt="Audio Zones Icon">
+          </a>
+          <h3>Audio Zone Selectors</h3>
+          <p>We provide and install audio zone selectors with intuitive control from wall panels, tablets, or smartphones.</p>
+        </div>
+
+        <div class="service-item">
+          <a href="https://www.paradisonetworx.com" aria-label="Connectivity Solutions">
+            <img src="https://www.paradisonetworx.com/coneccion-remota.png" alt="Connectivity Icon">
+          </a>
+          <h3>Connectivity Solutions</h3>
+          <p>We ensure comprehensive connectivity for all your devices and systems, optimizing performance and efficiency.</p>
+        </div>
+
+        <div class="service-item">
+          <a href="https://www.paradisonetworx.com" aria-label="Point of Sale (POS) Installation">
+            <img src="https://www.paradisonetworx.com/pos.png" alt="POS Icon">
+          </a>
+          <h3>Point of Sale (POS) Installation</h3>
+          <p>We set up and integrate efficient and user-friendly point-of-sale systems for your commercial business.</p>
+        </div>
+
+        <div class="service-item">
+          <a href="https://www.paradisonetworx.com" aria-label="Security Camera Installation">
+            <img src="https://www.paradisonetworx.com/camara-de-seguridad.png" alt="Security Camera Icon">
+          </a>
+          <h3>Security Camera Installation</h3>
+          <p>We install high-quality surveillance systems with optimal coverage and remote monitoring capabilities to ensure the safety of your business.</p>
+        </div>
+      </div>
+    </section>
+
+  <section id="portfolio">
+            <h2>Our Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3>"Delicious Aroma" Cafe</h3>
+                    <p>We implemented an IP audio solution throughout the cafe, allowing customized background music playback in different zones (main lounge, terrace). We also installed modern point-of-sale systems to streamline transactions.</p>
+                    <p><strong>Services Used:</strong> IP Audio, Point of Sale</p>
+                    <a href="https://www.paradisonetworx.com/delicious-aroma.html" target="_blank">View Project Details</a>
+                </div>
+                <div class="portfolio-item">
+                    <h3>"Fashion Trends" Clothing Store</h3>
+                    <p>We designed and installed a robust Wi-Fi network for both customers and staff. Additionally, we implemented an audio zone selector system with wall controls to set the store's ambiance with appropriate music for every moment.</p>
+                    <p><strong>Services Used:</strong> Network Installation, Audio Zone Selectors</p>
+                    <a href="https://www.paradisonetworx.com/portfolio-fashion" target="_blank">View Project Details</a>
+                </div>
+                <div class="portfolio-item">
+                    <h3>"Authentic Flavors" Restaurant</h3>
+                    <p>We handled the comprehensive connectivity of the restaurant, ensuring fast and reliable internet access for online order management and point-of-sale systems. We also installed tablet-controllable audio zone selectors for the musical atmosphere.</p>
+                    <p><strong>Services Used:</strong> Connectivity, Audio Zone Selectors, Point of Sale</p>
+                    <a href="https://www.paradisonetworx.com/portfolio-restaurant" target="_blank">View Project Details</a>
+                </div>
+                <div class="portfolio-item">
+                    <h3>"Tech Solutions Inc." Offices</h3>
+                    <p>We provided a high-speed and secure network infrastructure, optimizing internal communication and cloud application performance. Additionally, we implemented connectivity systems for their conference rooms.</p>
+                    <p><strong>Services Used:</strong> Network Installation, Connectivity</p>
+                    <a href="https://www.paradisonetworx.com/portfolio-techsolutions" target="_blank">View Project Details</a>
+                </div>
+            </div>
+        </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>
+        We are here to help you with your network infrastructure and smart technology needs. Contact us today to discuss your project and get a personalized quote.
+      </p>
+      <p>
+        You can email us at <a href="mailto:info@paradisonetworx.com" style="color: #8be9fd; text-decoration: none;">info@paradisonetworx.com</a> or call us at <a href="tel:+1234567890" style="color: #8be9fd; text-decoration: none;">+1 (234) 567-890</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>&copy; 2025 Paradiso Networx. All rights reserved.</footer>
+</body>
+</html>
