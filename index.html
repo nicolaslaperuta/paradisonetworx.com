@@ -17,17 +17,17 @@
 
 /* Tablets y escritorio */
 @media (min-width: 768px) {
+  .header-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
   .header-image {
     width: 50%;
     height: auto;
-    position: absolute;
-    top: 0;
-    right: 0;
     border-bottom-left-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  }
-  body {
-    position: relative;
   }
 }
 
@@ -230,7 +230,10 @@
 <body>
 
   <!-- Imagen header reemplazando el hero -->
-  <img src="https://www.paradisonetworx.com/header-paradiso-networx.jpg" alt="Header" class="header-image">
+    <div class="header-container">
+    <img src="https://www.paradisonetworx.com/header-paradiso-networx.jpg" alt="Header" class="header-image">
+  </div>
+
 
   <main>
     <section id="about">
