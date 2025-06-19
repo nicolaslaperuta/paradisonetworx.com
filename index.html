@@ -5,6 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paradiso Networx</title>
   <style>
+
+
+
+.header-image {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+}
+
+/* Tablets y escritorio */
+@media (min-width: 768px) {
+  .header-image {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+  body {
+    position: relative;
+  }
+}
+
+
+    
     html, body {
       margin: 0;
       padding: 0;
@@ -202,7 +230,7 @@
 <body>
 
   <!-- Imagen header reemplazando el hero -->
-  <img src="https://www.paradisonetworx.com/header-paradiso-networx.jpg" alt="Header" style="width: 100%; display: block; margin: 0 auto;">
+  <img src="https://www.paradisonetworx.com/header-paradiso-networx.jpg" alt="Header" class="header-image">
 
   <main>
     <section id="about">
