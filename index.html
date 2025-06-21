@@ -15,23 +15,41 @@
   align-items: flex-start;
 }
 
+/* Ambas imágenes ocupan el 50% del ancho por defecto */
 .header-image {
   width: 50%;
   height: auto;
   display: block;
 }
 
-@media (max-width: 767px) {
-  .header-container {
-    justify-content: center;
+/* Desktop & Tablet: mostrar izquierda, ocultar derecha */
+@media (min-width: 768px) {
+  .header-left {
+    display: block;
   }
 
+  .header-right {
+    display: none;
+  }
+
+  .header-container {
+    justify-content: flex-start;
+  }
+}
+
+/* Mobile: mostrar derecha, ocultar izquierda */
+@media (max-width: 767px) {
   .header-left {
     display: none;
   }
 
   .header-right {
+    display: block;
     width: 100%;
+  }
+
+  .header-container {
+    justify-content: center;
   }
 }
 
@@ -236,7 +254,7 @@
 <body>
 
   <!-- Imagen header reemplazando el hero -->
-   <div class="header-container">
+ <div class="header-container">
   <img src="https://www.paradisonetworx.com/header-paradiso-networx-2.jpg" alt="Header Left" class="header-image header-left">
   <img src="https://www.paradisonetworx.com/header-paradiso-networx-2.jpg" alt="Header Right" class="header-image header-right">
 </div>
